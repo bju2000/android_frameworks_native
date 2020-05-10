@@ -254,6 +254,8 @@ protected:
     virtual void setSurfaceDamage(android_native_rect_t* rects, size_t numRects);
 
 public:
+    virtual int lockWithHandle(ANativeWindow_Buffer* outBuffer,
+              buffer_handle_t* handle, ARect* inOutDirtyBounds);
     virtual int disconnect(int api,
             IGraphicBufferProducer::DisconnectMode mode =
                     IGraphicBufferProducer::DisconnectMode::Api);
